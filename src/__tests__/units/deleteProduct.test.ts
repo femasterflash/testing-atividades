@@ -1,17 +1,10 @@
-import { productDatabase, resetDatabase } from "../../database/database";
 import { ProductServices } from "../../services/product.services";
 import { productMock } from "../__mocks__/product.mock";
 
 describe("Unit test: delete product", () => {
-   beforeEach(() => {
-      resetDatabase();
+   test("delete product should work correctly", async () => {
+      const productServices = new ProductServices();
+
+      await productServices.delete(productMock.id);
    });
-
-   test("delete todo should work correctly", () => {
-     productDatabase.push(productMock);
-
-     const productServices = new ProductServices();
-
-     productServices.delete(productMock.id);
-   })
 });
