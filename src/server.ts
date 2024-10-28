@@ -1,7 +1,5 @@
 import { app } from "./app";
 
-const port = 3000 || process.env.PORT;
-
-app.listen(port, () => {
-    console.log(`API successfully started at port ${port}`);
-})
+app.listen(3000, () => {
+  console.log(`API successsfully started at port 3000`);
+});
